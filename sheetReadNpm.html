@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <!--<script type="text/javascript" src="tabletop.js"></script>-->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+    <!--script type="text/javascript" src="sheetRead.js"></script>-->
+
+    <script type="text/javascript">
+      function importGSS(json) {
+        // This callback runs once the url is hit, and comes back with all the data.
+        // At this point, json.feed.entry is an array of spreadsheet rows.  Hurray!
+        console.log(json.feed.entry.length);
+        console.log(json.feed.entry[184].title.$t);
+        console.log(json.feed.entry[184].content.$t);
+      }
+
+      $.getScript(
+        "https://spreadsheets.google.com/feeds/list/1zb2XfqgDrv8pG1hqgigFiMI3oqY4a83B1kPxE5BU9wU/od6/public/values?alt=json-in-script&callback=importGSS"
+      );
+    </script>
+
+    <!--<script src="https://spreadsheets.google.com/feeds/list/1zb2XfqgDrv8pG1hqgigFiMI3oqY4a83B1kPxE5BU9wU/od6/public/values?alt=json-in-script&callback=importGSS"></script>-->
+
+  </head>
+  <body>
+    <div>Hello.</div>
+  </body>
+</html>
