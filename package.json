@@ -8,5 +8,8 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {}
+  "dependencies": {
+    "request": "^2.51.0",
+    "servo-pca9685": "^0.1.3"
+  }
 }
